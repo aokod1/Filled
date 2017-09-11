@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context=".MainActivity"
+    android:id="@+id/RelativeLayout"
+    android:background="#ffffffff">
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:paddingTop="50dp"
+        android:text="@string/welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/homeKeyboard"
+        srcCompat="@drawable/keyboard"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_alignLeft="@+id/welcomeTxt"
+        android:layout_alignStart="@+id/welcomeTxt"
+        android:layout_below="@+id/welcomeTxt"
+        android:layout_marginTop="19dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/keyboard" />
+
+    <ImageView
+        android:id="@+id/homeLaptop"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_alignEnd="@+id/welcomeTxt"
+        android:layout_alignRight="@+id/welcomeTxt"
+        android:layout_alignTop="@+id/homeKeyboard"
+        android:visibility="visible"
+        app:srcCompat="@drawable/laptop" />
+
+    <ImageView
+        android:id="@+id/homeprinter"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_alignLeft="@+id/homeLaptop"
+        android:layout_alignStart="@+id/homeLaptop"
+        android:layout_alignTop="@+id/homeAdapter"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/printer" />
+
+    <ImageView
+        android:id="@+id/homeAdapter"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_alignLeft="@+id/homeKeyboard"
+        android:layout_alignStart="@+id/homeKeyboard"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/server" />
+
+    <TextView
+        android:id="@+id/lgnBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/homeAdapter"
+        android:layout_marginBottom="60dp"
+        android:text="@string/login"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/signBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lgnBttn"
+        android:layout_alignBottom="@+id/lgnBttn"
+        android:layout_alignEnd="@+id/homeprinter"
+        android:text="@string/signup"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
