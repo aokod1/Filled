@@ -7,4 +7,12 @@
     <string name="signup">Sign Up</string>
     <string name="title_activity_home">home</string>
     <string name="title_activity_login">login</string>
+    <string name="title_activity_sign_up">signUp</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="cell">Cell Phone</string>
+    <string name="pass">Password</string>
+    <string name="submit">Submit</string>
+
+
 </resources>

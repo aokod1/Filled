@@ -1,10 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-     tools:context=".MainActivity"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayout"
-    android:background="#ffffffff">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/welcomeTxt"
@@ -13,34 +14,34 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
+        android:fontFamily="cursive"
         android:paddingTop="50dp"
         android:text="@string/welcome"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp" />
+        android:textColor="@android:color/darker_gray"
+        android:textSize="50sp" />
 
     <ImageView
         android:id="@+id/homeKeyboard"
         srcCompat="@drawable/keyboard"
         android:layout_width="88dp"
         android:layout_height="66dp"
-        android:layout_alignLeft="@+id/welcomeTxt"
-        android:layout_alignStart="@+id/welcomeTxt"
-        android:layout_below="@+id/welcomeTxt"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="22dp"
         android:layout_weight="1"
         android:visibility="visible"
-        app:srcCompat="@drawable/keyboard" />
+        app:srcCompat="@drawable/keyboard"
+        android:layout_below="@+id/welcomeTxt"
+        android:layout_alignStart="@+id/homeAdapter" />
 
     <ImageView
         android:id="@+id/homeLaptop"
         android:layout_width="88dp"
         android:layout_height="66dp"
-        android:layout_alignEnd="@+id/welcomeTxt"
-        android:layout_alignRight="@+id/welcomeTxt"
-        android:layout_alignTop="@+id/homeKeyboard"
         android:visibility="visible"
-        app:srcCompat="@drawable/laptop" />
+        app:srcCompat="@drawable/laptop"
+        android:layout_alignTop="@+id/homeKeyboard"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="64dp" />
 
     <ImageView
         android:id="@+id/homeprinter"
@@ -57,24 +58,27 @@
         android:id="@+id/homeAdapter"
         android:layout_width="88dp"
         android:layout_height="66dp"
-        android:layout_alignLeft="@+id/homeKeyboard"
-        android:layout_alignStart="@+id/homeKeyboard"
-        android:layout_centerVertical="true"
         android:layout_weight="1"
         android:visibility="visible"
-        app:srcCompat="@drawable/server" />
+        app:srcCompat="@drawable/server"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/welcomeTxt"
+        android:layout_marginStart="19dp" />
 
     <TextView
         android:id="@+id/lgnBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/homeAdapter"
         android:layout_marginBottom="60dp"
+        android:clickable="true"
+        android:fontFamily="cursive"
+        android:onClick="onClick"
         android:text="@string/login"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textColor="@android:color/darker_gray"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/homeAdapter" />
 
     <TextView
         android:id="@+id/signBttn"
@@ -83,9 +87,12 @@
         android:layout_alignBaseline="@+id/lgnBttn"
         android:layout_alignBottom="@+id/lgnBttn"
         android:layout_alignEnd="@+id/homeprinter"
+        android:clickable="true"
+        android:fontFamily="cursive"
+        android:onClick="onClick"
         android:text="@string/signup"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
 

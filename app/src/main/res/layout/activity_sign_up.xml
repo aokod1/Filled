@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signUp"
+    android:id="@+id/RelativeLayout"
+    android:background="#ffffffff">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="cursive"
+        android:text="@string/signup"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/homeKeyboard"
+        srcCompat="@drawable/keyboard"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/keyboard" />
+
+    <ImageView
+        android:id="@+id/homeLaptop"
+        android:layout_width="68dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/homeKeyboard"
+        android:layout_marginEnd="64dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/laptop" />
+
+    <ImageView
+        android:id="@+id/homeprinter"
+        android:layout_width="68dp"
+        android:layout_height="48dp"
+        android:layout_alignStart="@+id/homeLaptop"
+        android:layout_alignTop="@+id/homeAdapter"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/printer" />
+
+    <ImageView
+        android:id="@+id/homeAdapter"
+        android:layout_width="68dp"
+        android:layout_height="48dp"
+        android:layout_alignStart="@+id/homeKeyboard"
+        android:layout_below="@+id/homeKeyboard"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@drawable/server" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="@string/name"
+        android:textSize="35sp"
+        android:layout_below="@+id/homeAdapter"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_marginTop="18dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView3"
+        android:layout_toStartOf="@+id/homeprinter" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="23dp"
+        android:fontFamily="cursive"
+        android:text="@string/cell"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="0835681244"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/editText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:onClick="onClick"
+        android:text="@string/submit" />
+</RelativeLayout>

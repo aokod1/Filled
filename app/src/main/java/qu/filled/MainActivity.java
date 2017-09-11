@@ -20,18 +20,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
     }
-    public void onClick(View view) {
-        /** if(view == (View) findViewById(R.id.login)) // code used to check which button has been clicked
+    public void onClick(View view)
+    {
+         if(view == (View) findViewById(R.id.lgnBttn)) // code used to check which button has been clicked
          {
-         Intent i = new Intent(this,Login.class); // Like making an object of the class ("Activity you want to call")
+         Intent i = new Intent(this,login.class); // Like making an object of the class ("Activity you want to call")
          startActivity(i);
          }
 
-         else if(view == (View) findViewById(R.id.SignUp))// this  signUp is the name of the button.
+         else if(view == (View) findViewById(R.id.signBttn))// this  signUp is the name of the button.
          {
-         Intent i = new Intent(this,SignUp.class);
+         Intent i = new Intent(this,signUp.class);
          startActivity(i);
-         }**/
+         }
     }
 
 
