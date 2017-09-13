@@ -2,6 +2,7 @@ package qu.filled;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarActivity;
@@ -19,21 +20,21 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
     }
     public void onClick(View view)
     {
-         if(view == (View) findViewById(R.id.lgnBttn)) // code used to check which button has been clicked
+         if(view == (View) findViewById(R.id.signUpbttn)) // code used to check which button has been clicked
          {
-         Intent i = new Intent(this,login.class); // Like making an object of the class ("Activity you want to call")
-         startActivity(i);
+            Intent i = new Intent(this,signUp.class); // Like making an object of the class ("Activity you want to call")
+            startActivity(i);
          }
 
-         else if(view == (View) findViewById(R.id.signBttn))// this  signUp is the name of the button.
-         {
-         Intent i = new Intent(this,signUp.class);
-         startActivity(i);
-         }
     }
+
+
 
 
         @Override

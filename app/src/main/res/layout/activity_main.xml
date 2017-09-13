@@ -13,9 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
         android:fontFamily="cursive"
-        android:paddingTop="50dp"
+        android:paddingTop="0dp"
         android:text="@string/welcome"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/darker_gray"
@@ -26,12 +25,13 @@
         srcCompat="@drawable/keyboard"
         android:layout_width="88dp"
         android:layout_height="66dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:visibility="visible"
         app:srcCompat="@drawable/keyboard"
         android:layout_below="@+id/welcomeTxt"
-        android:layout_alignStart="@+id/homeAdapter" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp" />
 
     <ImageView
         android:id="@+id/homeLaptop"
@@ -40,60 +40,60 @@
         android:visibility="visible"
         app:srcCompat="@drawable/laptop"
         android:layout_alignTop="@+id/homeKeyboard"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="64dp" />
+        android:layout_alignEnd="@+id/lgnBttn" />
 
     <ImageView
         android:id="@+id/homeprinter"
         android:layout_width="88dp"
         android:layout_height="66dp"
-        android:layout_alignLeft="@+id/homeLaptop"
-        android:layout_alignStart="@+id/homeLaptop"
-        android:layout_alignTop="@+id/homeAdapter"
         android:layout_weight="1"
         android:visibility="visible"
-        app:srcCompat="@drawable/printer" />
-
-    <ImageView
-        android:id="@+id/homeAdapter"
-        android:layout_width="88dp"
-        android:layout_height="66dp"
-        android:layout_weight="1"
-        android:visibility="visible"
-        app:srcCompat="@drawable/server"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/welcomeTxt"
-        android:layout_marginStart="19dp" />
+        app:srcCompat="@drawable/printer"
+        android:layout_alignEnd="@+id/welcomeTxt"
+        android:layout_alignTop="@+id/homeKeyboard" />
 
     <TextView
         android:id="@+id/lgnBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:clickable="true"
+        android:elevation="24dp"
         android:fontFamily="cursive"
         android:onClick="onClick"
+        android:paddingTop="0dp"
         android:text="@string/login"
         android:textColor="@android:color/darker_gray"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/homeAdapter" />
+        tools:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/signBttn"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/lgnBttn"
-        android:layout_alignBottom="@+id/lgnBttn"
-        android:layout_alignEnd="@+id/homeprinter"
+        android:fontFamily="cursive"
+        android:text="@string/slow"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/homeKeyboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
+    <TextView
+        android:id="@+id/signUpbttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:clickable="true"
         android:fontFamily="cursive"
         android:onClick="onClick"
-        android:text="@string/signup"
-        android:textColor="@android:color/darker_gray"
+        android:text="Sign Up"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="113dp" />
 
 
 </RelativeLayout>

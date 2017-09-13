@@ -11,7 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="cursive"
         android:text="@string/signup"
         android:textSize="50sp"
@@ -20,31 +20,28 @@
 
     <ImageView
         android:id="@+id/homeKeyboard"
-        srcCompat="@drawable/keyboard"
-        android:layout_width="68dp"
-        android:layout_height="46dp"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/textView2"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="48dp"
+        android:layout_height="26dp"
         android:layout_weight="1"
         android:visibility="visible"
-        app:srcCompat="@drawable/keyboard" />
+        app:srcCompat="@drawable/keyboard"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/homeAdapter" />
 
     <ImageView
         android:id="@+id/homeLaptop"
-        android:layout_width="68dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/homeKeyboard"
-        android:layout_marginEnd="64dp"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
         android:visibility="visible"
-        app:srcCompat="@drawable/laptop" />
+        app:srcCompat="@drawable/laptop"
+        android:layout_alignBottom="@+id/homeKeyboard"
+        android:layout_toEndOf="@+id/nameEditText"
+        android:layout_marginStart="19dp" />
 
     <ImageView
         android:id="@+id/homeprinter"
-        android:layout_width="68dp"
-        android:layout_height="48dp"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
         android:layout_alignStart="@+id/homeLaptop"
         android:layout_alignTop="@+id/homeAdapter"
         android:layout_weight="1"
@@ -53,14 +50,15 @@
 
     <ImageView
         android:id="@+id/homeAdapter"
-        android:layout_width="68dp"
-        android:layout_height="48dp"
-        android:layout_alignStart="@+id/homeKeyboard"
-        android:layout_below="@+id/homeKeyboard"
-        android:layout_marginTop="20dp"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:visibility="visible"
-        app:srcCompat="@drawable/server" />
+        app:srcCompat="@drawable/server"
+        android:layout_below="@+id/homeLaptop"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginStart="21dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -68,51 +66,85 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:text="@string/name"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:layout_below="@+id/homeAdapter"
-        android:layout_toStartOf="@+id/textView2"
-        android:layout_marginTop="18dp" />
+        android:layout_alignStart="@+id/nameEditText" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/nameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="First Name"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView3"
-        android:layout_toStartOf="@+id/homeprinter" />
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="John Doe"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="23dp"
         android:fontFamily="cursive"
         android:text="@string/cell"
-        android:textSize="35sp" />
+        android:textSize="30sp"
+        android:layout_below="@+id/nameEditText"
+        android:layout_alignStart="@+id/cellEditTetx"
+        android:layout_marginTop="18dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/cellEditTetx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
         android:ems="10"
         android:inputType="phone"
         android:hint="0835681244"
+        android:layout_marginTop="18dp"
         android:layout_below="@+id/textView4"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignStart="@+id/textView5" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="cursive"
+        android:text="@string/passw"
+        android:textSize="30sp"
+        android:layout_below="@+id/cellEditTetx"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/passTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/passw"
+        android:inputType="textPassword"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/subBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bckBttn"
+        android:layout_alignBottom="@+id/bckBttn"
+        android:layout_alignStart="@+id/passTextEdit"
+        android:onClick="onClick"
+        android:text="@string/submit"
+        tools:clickable="true" />
+
+    <Button
+        android:id="@+id/bckBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/textView2"
         android:onClick="onClick"
-        android:text="@string/submit" />
+        android:text="@string/back"
+        tools:clickable="true" />
 </RelativeLayout>
