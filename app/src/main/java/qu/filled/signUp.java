@@ -29,14 +29,20 @@ public class signUp extends Activity implements View.OnClickListener
 
     public final static boolean isValidEmail(CharSequence target)
     {
+        // Checks that the user has submitted a valid email address
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
 
+
+
     public void onClick(View view)
     {
-        if(view == (View) findViewById(R.id.subBttn)) // code used to check which button has been clicked
+        //Overall non traditional onclick that listens out for all button clicks
+
+        if(view == (View) findViewById(R.id.subBttn))
         {
+            // Onclick that listens out fros sign up button
             EditText Name = (EditText) findViewById(R.id.nameEditText); //
             String nameStr = Name.getText().toString();
 

@@ -56,6 +56,9 @@
         android:id="@+id/lgnBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:clickable="true"
         android:elevation="24dp"
         android:fontFamily="cursive"
@@ -65,9 +68,7 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="35sp"
         android:textStyle="bold"
-        tools:textStyle="bold"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        tools:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
@@ -85,15 +86,16 @@
         android:id="@+id/signUpbttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/lgnBttn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
         android:clickable="true"
         android:fontFamily="cursive"
         android:onClick="onClick"
         android:text="Sign Up"
+        android:textColor="@android:color/darker_gray"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="113dp" />
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
